@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Class 19 - 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## day 19 22.01.04
+### /components
+```
+https://ko.reactjs.org/docs/hooks-reference.html#usereducer
+```
+#### /Test1.js 
+```
+useReducer / dispatch 기본 구조
+```
+#### /Test2.js 
+```
+count 2개 예제 활용
+action.step 사용
+```
+#### /Test3.js 
+```
+도형 너비 증가감소
+초기값 {} 일때, return값 메소드..
+```
+#### /Test4.js 
+```
+useReducer / axios 연결
+```
+### /components1 && App1.js
+```
+router 기본 구조 및 응용
+참고 : https://reactrouter.com/docs/en/v6/upgrading/v5
+```
+- react : router 란 
+```
+SPA(Single Page Application) 싱글페이지라고 부르는 이유는 유저가 처음 접속했을때 구체적인 data를 제외한 정적파일을 모두 불러오기 때문 
+리액트 라우터로 페이지를 나누어 유저가 접속하는 url마다 다른 data를 보여줄 수 할수 있음
+페이지의 로딩 없이, 페이지에 필요한 컴포넌트를 불러와 렌더링 하여 보여주도록 도와줌
+새로운 페이지를 로드하지 않고 하나의 페이지 안에서 필요한 데이터만 가져오는 형태
+```
+```
+yarn add react-router-dom 
+```
+#### App1.js
+```
+import {  BrowserRouter as Router ,  Routes,  Route,  Link  } from "react-router-dom";
+<Route path="주소" element={ <보여주고싶은 컴포넌트 /> }>
 
-## Available Scripts
+Switch => Routes로 
 
-In the project directory, you can run:
+Route : 어떤경로로 들어왔을때 어떤 컴포넌트를 보여주겠다.. ( 컴포넌트 보이는 영역) 
+<Routes>
+<Route path="/aaa" element={<Aaa />} />
+<Route path="/bbb" element={<Bbb />} />
+</Routes>
 
-### `npm start`
+Link : Router의 주소를 바꿈 a 태그지만 새로고침 안됨
+<Link to="/">홈</Link>
+<Link to="/path주소">소개</Link>
+<Link to="/about">소개</Link>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+useHistory 사라짐 - useNavigate 함수
+history.push('/') -> navigate('/')
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
