@@ -4,6 +4,23 @@
 ### /components
 ```
 https://ko.reactjs.org/docs/hooks-reference.html#usereducer
+
+const [state , dispatch] = useReducer(reducer, initialState);
+state : 상태 데이터,
+dispatch : 액션을 발생시키는 함수 ( 액션을 보내는것)
+useReducer (상태업데이트로직을 담는 함수, 초기값);
+dispatch({type : '액션명'})
+type : 필수 ! : 액션명 - 한글, 영문소문자, 영문대문자 : 주로 영문 대문자를 사용한다  ( 별명 , 별칭 )
+dispath({ type : '액션명 , 키 : 값 , 키 : 값})
+actioon.type , action.키
+funtion 함수명(state, action) { (필수)
+    switch ( action.type) {
+        case : '액션명' : 
+            return 값;
+        default : 
+            return state
+    }    
+}
 ```
 #### /Test1.js 
 ```
