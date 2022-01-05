@@ -40,7 +40,7 @@ action.step 사용
 ```
 useReducer / axios 연결
 ```
-### /components1 && App1.js
+### /components1
 ```
 router 기본 구조 및 응용
 참고 : https://reactrouter.com/docs/en/v6/upgrading/v5
@@ -52,6 +52,7 @@ SPA(Single Page Application) 싱글페이지라고 부르는 이유는 유저가
 페이지의 로딩 없이, 페이지에 필요한 컴포넌트를 불러와 렌더링 하여 보여주도록 도와줌
 새로운 페이지를 로드하지 않고 하나의 페이지 안에서 필요한 데이터만 가져오는 형태
 ```
+#### /Home.js /About.js ..
 ```
 yarn add react-router-dom 
 ```
@@ -76,5 +77,8 @@ Link : Router의 주소를 바꿈 a 태그지만 새로고침 안됨
 useHistory 사라짐 - useNavigate 함수
 history.push('/') -> navigate('/')
 ```
+
+### components2
+다음시간(day20)에 연결, components1 + a , 살붙이기
 
 
