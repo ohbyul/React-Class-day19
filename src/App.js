@@ -5,33 +5,30 @@ import {
   Route,  
   Link, //a태그 처럼 연동
 } from "react-router-dom";
-import About from './components2/About';
-import Ceo from './components2/Ceo';
-import Home from './components2/Home';
-import Navbar from './components2/Navbar';
-import NotFiles from './components2/NotFiles';
-import Sub from './components2/Sub';
+import Main from './components7/Main';
+import ProductDetail from './components7/ProductDetail';
+import Products from './components7/Products';
+import './components7/style.css'
 
-import './css/reset.css';
-import './components2/style.css';
 
 function App() {
   return (
       <BrowserRouter>
-        <Navbar />
+        <nav>
+          <ul>
+            <li><Link to ="/">Home</Link></li>
+            <li><Link to ="/products">Products</Link></li>
+          </ul>
+        </nav>
         <Routes>
-          <Route path = "/" element = {<Home />} />
-          <Route path = "/about" element = {<About />} />
-          <Route path = "/ceo" element = {<Ceo />} />
-          <Route path = "/sub" element = {<Sub />} />
-          <Route path = "*" element = {<NotFiles />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/products">
+              <Route element ={<Products />} index />
+              <Route path =":productId" element={<ProductDetail />} />
+          </Route>
         </Routes>
       </BrowserRouter>
   );
 }
 
 export default App;
-
-//BrowserRouter 로 감싸준다.
-//https://cafe.naver.com/ezen03?iframe_url=/MyCafeIntro.nhn%3Fclubid=30578413
-//https://reactrouter.com/docs/en/v6/upgrading/v5
